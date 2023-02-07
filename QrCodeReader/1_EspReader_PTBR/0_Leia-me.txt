@@ -1,0 +1,46 @@
+DESENVOLVEDOR: 
+
+=> Autor: Gustavo Oliveira Ferreira dos Santos
+=> Github: https://github.com/GustavoOlSantos
+=> Data: Out.2022 - Jan.2023
+
+
+INFORMAÇÕES PROJETO
+
+=> Versão da IDE: Arduino 1.8.19
+=> Placa Utilizada: ESP32 CAM
+=> Placa Selecionada na IDE: AI THINKER ESP32-CAM
+=> Versão do pacote de placas: 1.0.2
+
+=> Arquivos de referência: https://github.com/fustyles/Arduino
+=> Pathway: Arduino/ESP32-CAM_QRCode_Recognition/ESP32QRCodeReader/
+
+=> A seção de leitura do QRCode desse projeto foi desenvolvido com base 8
+nos Códigos encontrados no Github acima.
+
+COMPONENTES: 
+
+ - ESP32-CAM 
+ - CARREGADOR/FONTE 5V
+ - DISPLAY LCD 16x02 com I2C
+
+***DICAS:
+
+- Para programar o ESP-CAM, será necessário conectar um adaptador/conversor USB no microcontrolador, já que o
+mesmo não acompanha um USB embarcado. Caso possua algum arduino ou outra placa que seja possível programar
+normalmente, essa placa pode ser utilizada como o conversor. No meu caso utilizei um Arduino Mega, veja a ligação:
+
+ESP32-CAM  =>   ARDUINO       
+5V                  =>      5V          
+GND              =>      GND        
+UOT              =>       1(TX)       
+UnR               =>       0(RX)        
+ Ligar IO0 no GND  | Ligar RESET no GND  (na própria placa, não entre elas)
+
+- Caso queira enviar dados para um servidor, basta alterar o texto da variavel "serverName" para:
+
+https://www.endereco.com.br/pasta/arquivo.php
+
+- Caso queira enviar dados para um localhost, basta alterar o texto da variavel "serverName" para:
+
+http://IPdaMáquina/pasta/arquivo.php

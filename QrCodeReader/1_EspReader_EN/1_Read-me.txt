@@ -1,0 +1,43 @@
+DEVELOPER
+
+=> Author: Gustavo Oliveira Ferreira dos Santos
+=> Github: https://github.com/GustavoOlSantos
+=> Date: Oct.2022 - Jan.2023
+
+
+PROJECT INFO
+
+=> IDE Version: Arduino 1.8.19
+=> Board: ESP32 CAM
+=> Board Selected in IDE: AI THINKER ESP32-CAM
+=> Board Package Version: 1.0.2
+
+=> Reference: https://github.com/fustyles/Arduino
+=> Pathway: Arduino/ESP32-CAM_QRCode_Recognition/ESP32QRCodeReader/
+
+COMPONENTS: 
+
+ - ESP32-CAM 
+ - 5V POWER SUPPLY
+ - I2C DISPLAY LCD 16x02 
+
+***TIPS:
+
+- To program the ESP-CAM, it'll be necessary to use a USB converter to the microcontroller, as it doesn't come with a built-in USB converter. If you have an Arduino or another compatible board, you can use it as a converter and program the ESP through the other micro. I used an Arduino Mega, see the connections bellow:
+
+ESP32-CAM  =>   ARDUINO       
+5V                  =>      5V          
+GND              =>      GND        
+UOT              =>       1(TX)       
+UnR               =>       0(RX)        
+IO0 and GND  | RESET and GND  (on the board itself, not between them)
+
+- If you want to send the data to a server, just change the variable "serverName"
+value to:
+
+https://www.address.com.br/folder/file.php
+
+- If you want to send the data to a localhost, just change the variable "serverName"
+value to:
+
+http://IPaddress/folder/file.php
